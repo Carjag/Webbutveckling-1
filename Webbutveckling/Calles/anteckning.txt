@@ -1,6 +1,0 @@
-Anteckningar:
-
-Nästa gång måste jag ändra från .test som fadear ut, till hela sidan förutom header. 
-
-Dessutom måste jag kopiera in från Hem.html till alla andra sidor och sätta dessa 
-till active istället för Hem.html
