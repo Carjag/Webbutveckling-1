@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title> Kontakt </title>
+</head>
+<body>
+    <div class="body">
+        <header id="navbar">
+            <div class="img">
+                <img src="cjlogo.png" class="cjlogo" alt="CJ logo">
+            </div>
+                <ul>
+                    <li><a id="inactiveHem" onclick="Hem()">Hem</a></li>
+                    <li><a id="inactiveWebb" onclick="Webbhistoria()">Webbhistoria</a></li>
+                    <li><a id="active" class="active" onclick="Kontakt()">Kontakt</a></li>
+                    <li><a id="inactiveOm" onclick="Om()">Om</a></li>
+                </ul>
+        </header>
+            <div class="test">
+                <p> Hejsan ska kolla om detta fungerar.</p>
+            </div>
+    </div>
+</body>
+<script>
+ var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-91px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+// ------------------------------------------- funktioner för varje enskild länk! -----------------------------------------------------------
+//------------------------------ Webbhistoria
+function Webbhistoria(){
+
+    const element = document.querySelector('.test');
+    element.classList.add('animation'); // Sätter klassen animation till elementet
+
+    setTimeout(() =>{
+        location.assign('http://localhost/Webbutveckling/Calles/webbhistoria.html')
+    } , 300) // dröjer processen av  navigationen i 3s (3000ms)
+}
+//------------------------------ Kontakt
+function Kontakt() {
+    const element = document.querySelector('.test');
+    element.classList.add('animation'); // Sätter klassen animation till elementet
+
+    setTimeout(() =>{
+        location.assign('http://localhost/Webbutveckling/Calles/Kontakt.html')
+    } , 300) // dröjer processen av  navigationen i 3s (3000ms)
+}
+//------------------------------- Om
+function Om() {
+    const element = document.querySelector('.test');
+    element.classList.add('animation'); // Sätter klassen animation till elementet
+
+    var element2 = document.getElementById("active");
+        element2.classList.remove("active");
+
+    var element3 = document.getElementById("inactiveOm")
+        element3.classList.add("active")
+
+    setTimeout(() =>{
+        location.assign('http://localhost/Webbutveckling/Calles/om.html')
+    } , 300) // dröjer processen av  navigationen i 3s (3000ms)
+}
+// -------------------------------- Hem
+function Hem() {
+    const element = document.querySelector('.test');
+    element.classList.add('animation'); // Sätter klassen animation till elementet
+
+    var element2 = document.getElementById("active");
+        element2.classList.remove("active");
+
+    var element3 = document.getElementById("inactiveHem")
+        element3.classList.add("active")
+
+    setTimeout(() =>{
+        location.assign('http://localhost/Webbutveckling/Calles/Hem.html')
+    } , 300) // dröjer processen av  navigationen i 3s (3000ms)
+}
+//----------------------------------------------------------------------------------------------------------------
+</script>
+</html>

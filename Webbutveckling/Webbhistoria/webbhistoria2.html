@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="animation-in.css">
+    <script type="text/javascript" defer src="script/animation-out.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
+    <title> Webbhistoria </title>
+</head>
+<style>
+    body {
+  margin:0;
+}
+.container {
+  width: 100%;
+}
+ul {
+  z-index: 5;
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #464435;
+    position:fixed;
+    top: 0;
+    width: 100%;
+  }
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: flex;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size:x-large;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    height:60px;
+    transition-duration: 0.5s; /* Detta gör att tiden det tar för skillnaden mellan texten här och 
+  animeringen för när man hovrar över knappen med musen blir 0.5 sekunder, vilket gör att det ser mer smooth ut. */
+    }
+  
+  li a:hover:not(.active) {
+    background-color: #5D5A46;
+  }
+  .active {
+    background-color: #747158;
+  }
+  .navbar {
+    height: 88px;
+  }
+  /*-----------------------------------------------------------------*/
+  .text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-image: url('html-code - kopia.jpg');
+    height:400px;
+  }
+  .text > h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size:50px;
+    color: white;
+    text-shadow: 0px 0px 20px black,0px 0px 20px black;
+  }
+  .text > p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-shadow: 0px 0px 20px black,0px 0px 20px black;
+  }
+    /*--------------------------------------------------------------------------*/
+  .inledning{ 
+    display:flex;
+    flex-direction: column;
+  }
+  .inledning > h1 {
+    text-align: center;
+    margin-top:15px;
+    font-family: 'Oswald', sans-serif;
+  }
+  .inledning > p {
+    margin-top:0;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  /*---------------------------------------------------------------------------------*/
+  .information {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px #747158;
+    position: relative;
+  }
+  .information > h1 {
+    font-family: 'Oswald', sans-serif;
+  }
+  .information > p {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-family:'Montserrat', sans-serif;
+  }
+/*-------------------------------------------------------------------------------*/
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active2{
+  transform: translateY(0);
+  opacity: 1;
+}
+/*------------------------------------------------------------------------------------*/
+.test {
+  position: relative;
+  top: 800px;
+  height: 300px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  height: 1000px;
+  border: solid black 3px;
+}
+</style>
+<body class="animate-in">
+  <div class="navbar">
+   <ul>
+      <li><a href="http://localhost/Webbutveckling/Webbhistoria/webbhistoria.html">Hem</a></li>
+      <li><a class="active" href="http://localhost/Webbutveckling/Webbhistoria/webbhistoria2.html">Webbhistoria</a></li>
+      <li><a href="http://localhost/Webbutveckling/Webbhistoria/Kontakt.html">Kontakt</a></li>
+      <li style="float:right"><a href="#Om">Om</a></li>
+    </ul>
+  </div>
+<div class="container">   
+  <div class="text">
+    <h1> WEBBHISTORIA </h1>
+    <p> <strong> <em> Internets </em> och <em> webbens </em> historia från 60-talet fram till 2000. </strong> </p>
+  </div>
+  <div class="inledning">
+    <h1> INTERNETS EVOLUTION </h1>
+    <p> <strong> Webbens evolution från 1960-talet har omformat samhället genom 
+      tillgänglighet till information och nya affärsmodeller. 
+      Samtidigt har dess globala påverkan genererat frågor om integritet 
+      och säkerhet. </strong> </p>
+  </div>
+  <div class="information reveal">
+    <h1> BAKGRUND TILL HISTORIAN </h1>
+      <p> <strong> Varför finns internet? Vem uppfann det och hur funkar det? Hur har 
+        internet och webben påverkat vårt samhälle och format det från dess skapelse till idag? 
+        Finns det något dåligt som webben har fört med sig? <br><br> Allt detta kommer du att få svar på på 
+        denna webbplats. Du kommer att få kronologisk information om internets och webbplatsernas 
+        utveckling, samt hur de har påverkat samhället i stort. </strong>
+      </p>
+  </div>
+  <div class="test"> 
+    <h1> HEJSAN </h1>
+  </div>
+</div> 
+<script>
+  function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 0;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active2");
+    } else {
+      reveals[i].classList.remove("active2");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+</script>
+</body>
+</html>

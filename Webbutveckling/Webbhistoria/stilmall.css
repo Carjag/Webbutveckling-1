@@ -1,0 +1,61 @@
+
+body {
+  background-color: black; /* för att bakgrunden ska vara svart vid övergångarna / animationerna. */
+  background-image: url('html-code - kopia.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  margin:0;
+}
+ @keyframes ul {
+  0% {position: fixed; top: 0px;}
+  75% {position: fixed; top: 200px;}
+  90% {position: sticky; top: 200px;} 
+  100% {position: sticky; top: 0px;}
+
+ }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #464435;
+    position: sticky;
+    top: 0px; 
+    width: 100%;
+    animation-name: ul;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode:forwards;
+  }
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    font-size: x-large;
+    color: white;
+    align-items: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    height:60px;
+    transition-duration: 0.5s;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #5D5A46;
+  }
+  .active {
+    background-color: #747158;
+  }
+  .header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    height: 200px;
+  }

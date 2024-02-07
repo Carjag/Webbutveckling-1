@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Uppgift 7 </title>
+</head>
+<style>
+ 
+body {
+    margin: 0px;
+}
+    .container {
+        display:flex;
+        flex-direction: column;
+        align-items: last baseline;
+        margin: 10px;
+        background-color: blue;
+        border: solid 5px black;
+    }
+    .elements {
+        background-color: rgb(44, 206, 44);
+        border: solid 2px black;
+        width: 200px;
+        font-size: xx-large; 
+    } 
+        #två, #tre {
+            height: fit-content;
+        }
+        #ett, #fyra {
+            height: 75px;
+        }
+
+@media only screen and (min-width: 400px) {
+    .container {
+        flex-direction: row;
+        box-sizing: border-box;
+        height: 250px;
+        justify-content: space-around;
+    }
+    .elements {
+        width: 150px;
+    }
+    #två, #tre {    
+        height: 150px;
+        flex-shrink: 1.5;
+    }
+    #ett, #fyra {
+        height: 150px;
+    }
+}
+
+</style>
+<body>
+
+<div class="container">
+    <div class="elements" id="ett">1</div>
+    <div class="elements" id="två">2</div>
+    <div class="elements" id="tre">3</div>
+    <div class="elements" id="fyra">4</div>
+</div>
+
+</body>
+</html>
