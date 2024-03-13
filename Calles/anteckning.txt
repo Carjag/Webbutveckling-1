@@ -1,0 +1,18 @@
+Anteckningar:
+
+Nästa gång måste jag ändra från .test som fadear ut, till hela sidan förutom header. 
+
+_______________________________
+
+Problem som jag har stött på under kodning av hemsidan:
+
+1. Att strukturera navbaren så att länkarna var separerade från loggan och jämna avstånd.
+
+2. Att använda fast positionering i kombination med flex-element för att få avstånd rätt.
+
+3. Funktioner inom Javascript som öppnar länkarna och väntar tills animationer har skett. Samt dessa i css och 
+att de ska hända under en viss tidsperiod.
+
+4. Att lägga till och ta bort klasser för att få understrykningen att fungera då man hovrar med musen över länkarna. 
+
+5. Storleken på navbaren och hur den kopplas till att den försvinner när man skrollar ner på sidan. 
