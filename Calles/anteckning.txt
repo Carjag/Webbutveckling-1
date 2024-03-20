@@ -1,0 +1,32 @@
+Anteckningar:
+
+Lägga till icon library för social media buttons (https://www.w3schools.com/howto/howto_css_social_media_buttons.asp)
+
+Även icon library för liten animation på första sidan 
+
+På webbutveckling, gör sex knappar med de olika tidpunkterna så som tobias ahlins sida. 
+Använd denna (https://stackoverflow.com/questions/16349490/html-css-buttons-that-scroll-down-to-different-div-sections-on-a-webpage)
+Och gör så att de skrollar ner till rätt ställe. Gör dessutom en knapp till [top]
+
+Kolla om det går att animera skrollningen.
+_______________________________
+
+Problem som jag har stött på under kodning av hemsidan:
+
+1. Att strukturera navbaren så att länkarna var separerade från loggan och jämna avstånd. Det tog lång tid att lösa
+men fungerade till slut med flexbox-strukturen och gemensamma element för loggan och navbaren.
+
+2. Att använda fast positionering i kombination med flex-element för att få avstånd rätt.
+Exempelvis låg footer i början efter div-elementen i vanlig ordning samt rubriker under navbaren, men med hjälp
+av z-layers och fast positionering lyckades jag att fixa detta. 
+
+3. Funktioner inom Javascript som öppnar länkarna och väntar tills animationer har skett. Samt dessa i css och 
+att de ska hända under en viss tidsperiod. Till slut lärde jag mig hur de fungerar och lyckades implementera dessa
+i min html kod för att klick skulle starta funktioner som gör att sidan fadear ut etc. 
+
+4. Att lägga till och ta bort klasser för att få understrykningen att fungera då man hovrar med musen över länkarna. 
+Lärde jag mig via w3schools och använde detta för att få animationerna att fungera. 
+
+5. Storleken på navbaren och hur den kopplas till att den försvinner när man skrollar ner på sidan. Kollade höjden
+på elementet samt texterna och kunde därifrån räkna ut mur mycket man behövde minska avståndet top: -88px; för att
+hela navbaren skulle försvinna.
